@@ -1,5 +1,5 @@
 <?php
-class PluginExampleSynchro extends CommonDBTM
+class PluginFibloxSynchro extends CommonDBTM
 {
 	static function cronSynchronize()
 	{

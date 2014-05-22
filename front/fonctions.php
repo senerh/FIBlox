@@ -57,7 +57,7 @@ function getAvancement()
 {
 	global $DB;
 
-	$rq = "SELECT avancement FROM `glpi`.`glpi_plugin_example_data`;";
+	$rq = "SELECT avancement FROM `glpi`.`glpi_plugin_fiblox_data`;";
 	$reponse = $DB->query($rq);
 	$avancement = $reponse->fetch_assoc();
 	$avancement = $avancement['avancement'];
@@ -69,14 +69,14 @@ function setAvancement($avancement)
 {
 	global $DB;
 
-	$DB->query("UPDATE `glpi`.`glpi_plugin_example_data` SET `avancement` = '$avancement' WHERE `glpi_plugin_example_data`.`id` = 1;");
+	$DB->query("UPDATE `glpi`.`glpi_plugin_fiblox_data` SET `avancement` = '$avancement' WHERE `glpi_plugin_fiblox_data`.`id` = 1;");
 }
 
 function getUpdateDate()
 {
 	global $DB;
 
-	$rq = "SELECT date FROM `glpi`.`glpi_plugin_example_data`;";
+	$rq = "SELECT date FROM `glpi`.`glpi_plugin_fiblox_data`;";
 	$reponse = $DB->query($rq);
 	$date = $reponse->fetch_assoc();
 	$date = $date['date'];
@@ -89,7 +89,7 @@ function setUpdateDate()
 {
 	global $DB;
 	
-	$rq = "UPDATE `glpi`.`glpi_plugin_example_data` SET `date` = NOW() WHERE `glpi_plugin_example_data`.`id` = 1;";
+	$rq = "UPDATE `glpi`.`glpi_plugin_fiblox_data` SET `date` = NOW() WHERE `glpi_plugin_fiblox_data`.`id` = 1;";
 
 	$DB->query($rq);
 }
@@ -98,7 +98,7 @@ function getConfiguration()
 {
 	global $DB;
 	
-	$rq = "SELECT * FROM `glpi`.`glpi_plugin_example_configuration`;";
+	$rq = "SELECT * FROM `glpi`.`glpi_plugin_fiblox_configuration`;";
 	$reponse = $DB->query($rq);
 	
 	$data = $reponse->fetch_assoc();
@@ -115,7 +115,7 @@ function isConfigured()
 {
 	global $DB;
 	
-	$rq = "SELECT * FROM `glpi`.`glpi_plugin_example_configuration`;";
+	$rq = "SELECT * FROM `glpi`.`glpi_plugin_fiblox_configuration`;";
 	$reponse = $DB->query($rq);
 	
 	$data = $reponse->fetch_assoc();

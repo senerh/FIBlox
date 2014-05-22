@@ -5,7 +5,7 @@ include(__DIR__.'/fonctions.php');
 
 if ($_SESSION["glpiactiveprofile"]["interface"] == "central")
 {
-	Html::header('Mon plugin', $_SERVER['PHP_SELF'],"plugins","example","home");
+	Html::header('Mon plugin', $_SERVER['PHP_SELF'],"plugins","fiblox","home");
 }
 else
 {
