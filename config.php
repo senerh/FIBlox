@@ -40,7 +40,7 @@ else//Saisie
 		<table class="tab_cadre_fixe">
 			<tbody>
 				<tr><th colspan="2">'.$msg.'</th></tr>
-				<tr><td style="text-align: right;" width="50%">Adresse du serveur (fqdn)</td> <td style="text-align: left;" >'.$tab[0].'</td></tr>
+				<tr><td style="text-align: right;" width="50%">Adresse du serveur (FQDN)</td> <td style="text-align: left;" >'.$tab[0].'</td></tr>
 				<tr><td style="text-align: right;" >Utilisateur</td> <td style="text-align: left;" >'.$tab[1].'</td></tr>
 				<tr><td style="text-align: right;" >Mot de passe</td> <td style="text-align: left;" >'.$tab[2].'</td></tr>
 			</tbody>
@@ -51,7 +51,7 @@ else//Saisie
 			<table class="tab_cadre_fixe">
 				<tbody>
 					<tr><th colspan="2">Connexion au serveur Infoblox</th></tr>
-					<tr><td style="text-align: right;" width="50%">Adresse du serveur (fqdn)</td> <td style="text-align: left;" ><input type="text" name="ip"/></td></tr>
+					<tr><td style="text-align: right;" width="50%">Adresse du serveur (FQDN)</td> <td style="text-align: left;" ><input type="text" name="ip"/></td></tr>
 					<tr><td style="text-align: right;" >Utilisateur</td> <td style="text-align: left;" ><input type="text" name="user"/></td></tr>
 					<tr><td style="text-align: right;" >Mot de passe</td> <td style="text-align: left;" ><input type="password" name="password"/></td></tr>
 					<tr><td style="text-align: center;" colspan="2"><input class="submit" type="submit" value="Valider" /></td></tr>
