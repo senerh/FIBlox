@@ -20,7 +20,7 @@ if (isset($_POST['ip']) && isset($_POST['user']) && isset($_POST['password']) &&
 }
 else//Saisie
 {
-	Html::header('Mon plugin', $_SERVER['PHP_SELF'],"plugins","fiblox","config");
+	Html::header('FIBlox', $_SERVER['PHP_SELF'],"plugins","fiblox","config");
 	if (isConfigured())
 	{
 		$msg = "Configuration correcte";

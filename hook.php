@@ -59,9 +59,9 @@ function plugin_fiblox_install()
 	
 	//cron
 	$cron = new CronTask;
-	if (!$cron->getFromDBbyName('PluginExampleSynchro','Synchronize'))
+	if (!$cron->getFromDBbyName('PluginFibloxSynchro','Synchronize'))
 	{
-		CronTask::Register('PluginExampleSynchro', 'Synchronize', DAY_TIMESTAMP,array('param' => 24));
+		CronTask::Register('PluginFibloxSynchro', 'Synchronize', DAY_TIMESTAMP,array('param' => 24));
 	}
 	return true;
 }
@@ -85,9 +85,9 @@ function plugin_fiblox_uninstall()
 	}
 	
 	$cron = new CronTask;
-	if ($cron->getFromDBbyName('PluginExampleSynchro','Synchronize'))
+	if ($cron->getFromDBbyName('PluginFibloxSynchro','Synchronize'))
 	{
-		CronTask::Unregister('PluginExampleSynchro');
+		CronTask::Unregister('PluginFibloxSynchro');
 	}
 	return true;
 }

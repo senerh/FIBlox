@@ -51,7 +51,7 @@ function plugin_init_fiblox()
 	// Change profile
 	$PLUGIN_HOOKS['change_profile']['fiblox'] = 'plugin_change_profile_fiblox';
 	
-	Plugin::registerClass('PluginExampleSynchro');
+	Plugin::registerClass('PluginFibloxSynchro');
 }
 
 
@@ -59,7 +59,7 @@ function plugin_init_fiblox()
 function plugin_version_fiblox()
 {
 	return array(
-	'name'           => 'Mon plugin',
+	'name'           => 'FIBlox',
 	'version'        => '0.84+1.0',
 	'author'         => 'Hakan SENER',
 	'license'        => 'GPLv2+',
