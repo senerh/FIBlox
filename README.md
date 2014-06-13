@@ -23,5 +23,7 @@ Pré-requis
   plugin FusionInventory
 
   API Perl Infoblox
-
-  Droit d'écriture de l'utilisateur www-data dans le repertoire du plugin
+  
+Plus d'informations
+===================
+	Consulter le fichier "documentation FIBlox.pdf" pour plus d'informations
