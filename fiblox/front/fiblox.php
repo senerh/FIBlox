@@ -17,13 +17,18 @@ if (getAvancement() == 100)
 	$date = getUpdateDate();
 	echo "Denière mise à jour : <strong>$date</strong>.";
 }
-else
+elseif (getAvancement() != 100)
+{
+        $av = getAvancement();
+        echo " <strong> Mise à jour en cours ...(".$av." %) </strong> ";
+}
+/*else
 {
 	echo '<div id="progress">';
 	echo '<div id="progressbar"><div></div></div>';
 	echo '<div id="text"></div>';
 	echo '</div>';
-}
+}*/
 Search::show('PluginFusioninventoryIPRange');
 
 Html::footer();

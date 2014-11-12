@@ -124,15 +124,24 @@ function isConfigured()
 	$password = $data['password'];
 	
 	$reponse->free();
-	
-	$cmd = "perl ".__DIR__."/testconn.pl -s $ip -u $user -p $password -e 'show network $networkIP' > ".__DIR__."/res3.txt";
-	
+
+	/*execution du script perl qui retourne dans res4.txt:
+	- OK si la connexion au boitier s'est effectuée avec succès
+	- CHANGE + NOM_DNS_SERVEUR_ACTIVE si le boitier auquel on essaye de se connecter est un boitier passif d'un cluster
+	- PB si la connexion au boitier a échouée
+	*/ 
+	$cmd = "perl ".__DIR__."/testactive.pl -s $ip -u $user -p $password > ".__DIR__."/res4.txt";
 	exec($cmd);
-	$fichier = file_get_contents(__DIR__.'/res3.txt');
-	
-	if (strcmp("OK", $fichier) == 0)
+	$fichier = file(__DIR__.'/res4.txt');
+	$fichier[1] = str_replace("\n", "",$fichier[1]);
+	if($fichier[0] == "OK \n")
 	{
 		return 1;
+	}	
+	elseif($fichier[0] == "CHANGE\n")
+	{
+		$DB->query("UPDATE `glpi`.`glpi_plugin_fiblox_configuration` SET `ip` = '$fichier[1]' WHERE `glpi_plugin_fiblox_configuration`.`id` = 1;");
+		 isConfigured(); // on rapelle la fonction
 	}
 	else
 	{

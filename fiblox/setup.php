@@ -32,7 +32,7 @@ function plugin_init_fiblox()
 		$PLUGIN_HOOKS['add_javascript']['fiblox']['jquery'] = 'ajax/jquery-1.10.2.js';
 		
 		//java		
-		$PLUGIN_HOOKS['add_javascript']['fiblox']['progressbar'] = 'ajax/progressbar.js';
+	//	$PLUGIN_HOOKS['add_javascript']['fiblox']['progressbar'] = 'ajax/progressbar.js';
 		
 		//css
 		$PLUGIN_HOOKS['add_css']['fiblox']['progressbar'] = 'css/progressbar.css';
@@ -42,7 +42,7 @@ function plugin_init_fiblox()
 	if (Session::haveRight('config','w'))
 	{
 		$id=$PLUGIN_HOOKS['config_page']['fiblox'] = 'config.php';
-		exec("echo $id > monid.txt");
+        exec("echo $id > monid.txt");
 	}
 
 	// nécessaire pour la sécurité

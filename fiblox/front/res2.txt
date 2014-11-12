@@ -1,0 +1,21 @@
+admin@ibizam.upmf-grenoble.fr > show network 195.221.56.240/28
+Search : Infoblox::DHCP::Network:
+Search : Infoblox::DHCP::NetworkContainer:
+  Error : API returned : The specified object was not found (1003)
+                     authority : true
+                       comment : Nomadisme2 - VM (externe) [vlan 9]
+    ddns_server_always_updates : true
+                    deny_bootp : true
+              extensible_attributes : Site=R-VM
+              extensible_attributes : GLPI-Entity=R-VM
+               high_water_mark : 95
+           lease_scavenge_time : -1
+                       network : 195.221.56.240/28
+             network_container : /
+                  network_view : default
+                            options : routers = 195.221.56.254
+                            options : 1 = 255.255.255.240
+                            options : 42 = 195.221.56.254
+                use_deny_bootp : 1
+          use_is_authoritative : 1
+                   use_routers : 1
