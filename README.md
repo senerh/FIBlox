@@ -1,5 +1,3 @@
-FiBlox_V2
-=========
 FIBlox version 2.0 
 =========
 Auteur : Valentin ROJON / Hakan SENER
