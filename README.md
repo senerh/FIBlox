@@ -2,7 +2,7 @@ FIBlox version 2.0
 =========
 Auteur : Valentin ROJON / Hakan SENER
 
-Version : 0.84+1.0
+Version : 0.84+2.0
 
 Licence : GPLv2+
 
